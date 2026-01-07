@@ -6,13 +6,13 @@ scene.background = new THREE.Color(0xffe187);
 
 // 카메라 Camera
 const camera = new THREE.PerspectiveCamera(
-  50,
-  window.innerWidth / window.innerHeight,
-  0.1,
-  1000
+  50, // 시야각(fov)
+  window.innerWidth / window.innerHeight, // 종횡비(aspect ratio)
+  0.1, // near clipping plane
+  1000 // far clipping plane
 );
-camera.position.set(3, 3, 3);
-camera.lookAt(0, 0, 0);
+camera.position.set(3, 3, 3);// x, y, z 위치에 카메라 놓기
+camera.lookAt(0, 0, 0);// 원점(0,0,0)을 바라보기
 
 // 렌더러 Renderer
 const renderer = new THREE.WebGLRenderer();
